@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+  --tran-1: all ease 0.5s;
+  --color-1: #0172a7;
+  --color-2: #9ea3ff;
+  --color-10: #ffb0f8;
+  --color-3: #ec0000;
+  --color-5: #0c0a0a;
+  --color-6: #eaeaea;
+  --color-7: #d9d9d9;
+  --color-8: #dbddff;
+  --color-9: #fee4fc;
+  --radius: 7px;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: #fff;
+  z-index: 1;
+}
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+button:focus{
+  outline: unset;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: var(--color-2);
+  text-decoration: none;
+  background: transparent;
+  transition: all ease .3s;
+}
+a:hover{
+  color: var(--color-1);
+}
+.trans {
+  transition: all ease .5s;
+}
+.text-center {
+  text-align: center;
+}
+.rlt {
+  position: relative;
+}
+.img-fluid, .img-responsive{
+  max-width: 100%;
+  height: auto;
+}
+.align-items-center{
+  align-items: center;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.list-unstyled{
+  list-style: none;
+}
+/* header dùng chung */
+.header {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: 'Dancing Script', cursive;
+}
+/* title dùng chung */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 250px;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-7);
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  height: 15px;
+  width: 15px;
+  background-image: url(../images/icon-title.webp);
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+/* begin banner */
+.dots-cus {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+.dots-cus button.owl-dot.active, 
+.dots-cus button.owl-dot:hover {
+  background: var(--color-2);
+   border-radius: 50%;
+}
+.dots-cus button.owl-dot{
+  border:none;
+  background: var(--color-5);
+   border-radius: 50%;
+   height: 16px;
+   width: 16px;
+   position: relative;
+   margin: .5rem 0;
+}
+/* end carousel banner */
+/* begin home about */
+.about-home-content {
+  font-size: 1.5rem;
+}
+.about-image-box {
+  line-height: 50px;
+  position: relative;
+  border: 8px solid transparent;
+  border-radius: 50px;
+  background: #fff;
+  background-clip: padding-box;
+}
+.about-image-box a img {
+  width: auto!important;
+  max-width: 100%;
+  display: unset!important;
+}
+.about-image-box:after {
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  background: -webkit-gradient(linear, left top, right top, from (var(--color-8)), to(var(--color-9)));
+  background: -webkit-linear-gradient(left, var(--color-8), var(--color-9));
+  background: -o-linear-gradient(left, var(--color-8), var(--color-9));
+  background: linear-gradient(to right, var(--color-8), var(--color-9));
+  content: "";
+  z-index: -1;
+  border-radius: 50px;
+}
+.about-image-box:hover {
+  background: linear-gradient(to right, var(--color-8), var(--color-9));
+  cursor: pointer;
+  position: sticky;
+}
+/* end about home */
+/* begin countdown watch */
+.countdown-watch {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.countdown-watch-box {
+  background: linear-gradient(to left, var(--color-8), var(--color-9));
+  border-radius: var(--radius);
+}
+/* end countdown watch */
+/* begin products home */
+.product-name {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-image-box a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, var(--color-8), var(--color-9));
+  opacity: 0;
+  transition: var(--tran-1);
+}
+
+.product-image-box:hover img {
+  transform: scale(1.1);
+  transition: var(--tran-1);
+}
+
+.product-image-box a:hover::before {
+  z-index: 1;
+  opacity: .5;
+  transition: var(--tran-1);
+}
+
+.product-buy-now-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid;
+  background-color: var(--color-6);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right bottom, var(--color-8), var(--color-9));
+  border-radius: 50px;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: var(--color-10);
+  font-weight: 700;
+}
+
+.product-price-old {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-7);
+  text-decoration: line-through;
+}
+/* end product home */
+/* responsive */
+
+@media (max-width: 350px) {
+  .title::before {
+    left: 0;
+  }
+}
